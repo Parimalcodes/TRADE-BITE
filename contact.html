@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us – TRADE BITE</title>
+  <link rel="icon" href="assets/TRADE BITE.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/"><img src="assets/TRADE BITE.png" alt="TRADE BITE" class="logo"></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="contact.html" aria-current="page" class="btn btn-primary">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1>Connect With Us</h1>
+      <form class="card" id="contactForm" style="max-width:720px; margin:auto; padding:24px;" novalidate>
+        <div style="display:grid; gap:12px; grid-template-columns:1fr 1fr;">
+          <label>Full Name*<br><input type="text" name="fullname" required minlength="2" style="width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px;" placeholder="Enter your full name"></label>
+          <label>Email*<br><input type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" style="width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px;" placeholder="example@email.com"></label>
+          <label style="grid-column:1 / -1;">Country*<br><select name="country" id="countrySelect" required style="width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px;">
+            <option value="">Select Country</option>
+            <option value="IN" data-code="+91" data-length="10">India</option>
+            <option value="US" data-code="+1" data-length="10">United States</option>
+            <option value="GB" data-code="+44" data-length="10">United Kingdom</option>
+            <option value="CA" data-code="+1" data-length="10">Canada</option>
+            <option value="AU" data-code="+61" data-length="9">Australia</option>
+            <option value="DE" data-code="+49" data-length="11">Germany</option>
+            <option value="FR" data-code="+33" data-length="9">France</option>
+            <option value="IT" data-code="+39" data-length="10">Italy</option>
+            <option value="ES" data-code="+34" data-length="9">Spain</option>
+            <option value="NL" data-code="+31" data-length="9">Netherlands</option>
+            <option value="BE" data-code="+32" data-length="9">Belgium</option>
+            <option value="CH" data-code="+41" data-length="9">Switzerland</option>
+            <option value="AE" data-code="+971" data-length="9">UAE</option>
+            <option value="SA" data-code="+966" data-length="9">Saudi Arabia</option>
+            <option value="SG" data-code="+65" data-length="8">Singapore</option>
+            <option value="MY" data-code="+60" data-length="9">Malaysia</option>
+            <option value="TH" data-code="+66" data-length="9">Thailand</option>
+            <option value="ID" data-code="+62" data-length="9">Indonesia</option>
+            <option value="PH" data-code="+63" data-length="10">Philippines</option>
+            <option value="CN" data-code="+86" data-length="11">China</option>
+            <option value="JP" data-code="+81" data-length="10">Japan</option>
+            <option value="KR" data-code="+82" data-length="10">South Korea</option>
+            <option value="BR" data-code="+55" data-length="11">Brazil</option>
+            <option value="MX" data-code="+52" data-length="10">Mexico</option>
+            <option value="AR" data-code="+54" data-length="10">Argentina</option>
+            <option value="ZA" data-code="+27" data-length="9">South Africa</option>
+            <option value="EG" data-code="+20" data-length="10">Egypt</option>
+            <option value="NG" data-code="+234" data-length="10">Nigeria</option>
+            <option value="KE" data-code="+254" data-length="9">Kenya</option>
+            <option value="OTHER" data-code="" data-length="15">Other</option>
+          </select></label>
+          <label>Country Code*<br><input type="text" name="countrycode" id="countryCodeInput" required readonly style="width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px; background:#f9fafb;" placeholder="Select country first"></label>
+          <label>Mobile Number*<br><input type="tel" name="mobile" id="mobileInput" required style="width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px;" placeholder="Enter your mobile number" title="Enter mobile number"></label>
+          <label style="grid-column:1 / -1;">Company Name*<br><input type="text" name="company" required minlength="2" style="width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px;" placeholder="Enter company name"></label>
+          <label style="grid-column:1 / -1;">Message*<br><textarea name="message" required minlength="10" rows="5" style="width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:8px;" placeholder="Enter your message"></textarea></label>
+        </div>
+        <div id="errorMsg" style="color:#ef4444; margin-top:12px; padding:12px; border-radius:8px; display:none; font-weight:500;"></div>
+        <div style="margin-top:16px; display:flex; gap:12px;">
+          <button type="submit" class="btn btn-primary">Send Enquiry</button>
+          <button type="reset" class="btn btn-outline">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container copyright">
+      <p>© 2025 TRADE BITE</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  </body>
+  </html>
+
+
